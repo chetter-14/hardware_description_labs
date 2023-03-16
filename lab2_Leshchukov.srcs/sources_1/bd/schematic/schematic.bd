@@ -1,0 +1,314 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2CCA5367C0B5EA8A",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../lab2_Leshchukov.gen/sources_1/bd/schematic",
+      "name": "schematic",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "debounce_0": "",
+      "hexled_0": "",
+      "Mux_0": "",
+      "Rcounter_0": "",
+      "FSM_0": "",
+      "divider_0": ""
+    },
+    "ports": {
+      "updown": {
+        "direction": "I"
+      },
+      "RESET": {
+        "direction": "I"
+      },
+      "D_IN": {
+        "direction": "I"
+      },
+      "Clock": {
+        "direction": "I"
+      },
+      "LED": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "Anode": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "debounce_0": {
+        "vlnv": "xilinx.com:module_ref:debounce:1.0",
+        "xci_name": "schematic_debounce_0_0",
+        "xci_path": "ip\\schematic_debounce_0_0\\schematic_debounce_0_0.xci",
+        "inst_hier_path": "debounce_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debounce",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLOCK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RESET",
+                "value_src": "constant"
+              }
+            }
+          },
+          "RESET": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "D_IN": {
+            "direction": "I"
+          },
+          "Q_OUT": {
+            "direction": "O"
+          }
+        }
+      },
+      "hexled_0": {
+        "vlnv": "xilinx.com:module_ref:hexled:1.0",
+        "xci_name": "schematic_hexled_0_0",
+        "xci_path": "ip\\schematic_hexled_0_0\\schematic_hexled_0_0.xci",
+        "inst_hier_path": "hexled_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hexled",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "HEX": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "LED": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "Mux_0": {
+        "vlnv": "xilinx.com:module_ref:Mux:1.0",
+        "xci_name": "schematic_Mux_0_0",
+        "xci_path": "ip\\schematic_Mux_0_0\\schematic_Mux_0_0.xci",
+        "inst_hier_path": "Mux_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "Address": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "Q": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Rcounter_0": {
+        "vlnv": "xilinx.com:module_ref:Rcounter:1.0",
+        "xci_name": "schematic_Rcounter_0_0",
+        "xci_path": "ip\\schematic_Rcounter_0_0\\schematic_Rcounter_0_0.xci",
+        "inst_hier_path": "Rcounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Rcounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "updown": {
+            "direction": "I"
+          },
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "Reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "FSM_0": {
+        "vlnv": "xilinx.com:module_ref:FSM:1.0",
+        "xci_name": "schematic_FSM_0_0",
+        "xci_path": "ip\\schematic_FSM_0_0\\schematic_FSM_0_0.xci",
+        "inst_hier_path": "FSM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "FSM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "Reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Address": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "Anode": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "divider_0": {
+        "vlnv": "xilinx.com:module_ref:divider:1.0",
+        "xci_name": "schematic_divider_0_0",
+        "xci_path": "ip\\schematic_divider_0_0\\schematic_divider_0_0.xci",
+        "inst_hier_path": "divider_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "Clk_led": {
+            "direction": "O"
+          },
+          "Clk_deb": {
+            "direction": "O"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "RESET_1": {
+        "ports": [
+          "RESET",
+          "debounce_0/RESET",
+          "FSM_0/Reset",
+          "Rcounter_0/Reset",
+          "divider_0/reset"
+        ]
+      },
+      "D_IN_1": {
+        "ports": [
+          "D_IN",
+          "debounce_0/D_IN"
+        ]
+      },
+      "Clock_1": {
+        "ports": [
+          "Clock",
+          "divider_0/Clock"
+        ]
+      },
+      "updown_1": {
+        "ports": [
+          "updown",
+          "Rcounter_0/updown"
+        ]
+      },
+      "debounce_0_Q_OUT": {
+        "ports": [
+          "debounce_0/Q_OUT",
+          "Rcounter_0/Clk"
+        ]
+      },
+      "divider_0_Clk_deb": {
+        "ports": [
+          "divider_0/Clk_deb",
+          "debounce_0/CLOCK"
+        ]
+      },
+      "divider_0_Clk_led": {
+        "ports": [
+          "divider_0/Clk_led",
+          "FSM_0/Clk"
+        ]
+      },
+      "Rcounter_0_data": {
+        "ports": [
+          "Rcounter_0/data",
+          "Mux_0/A"
+        ]
+      },
+      "FSM_0_Address": {
+        "ports": [
+          "FSM_0/Address",
+          "Mux_0/Address"
+        ]
+      },
+      "hexled_0_LED": {
+        "ports": [
+          "hexled_0/LED",
+          "LED"
+        ]
+      },
+      "Mux_0_Q": {
+        "ports": [
+          "Mux_0/Q",
+          "hexled_0/HEX"
+        ]
+      },
+      "FSM_0_Anode": {
+        "ports": [
+          "FSM_0/Anode",
+          "Anode"
+        ]
+      }
+    }
+  }
+}
